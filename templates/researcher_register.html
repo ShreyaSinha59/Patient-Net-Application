@@ -1,0 +1,30 @@
+<!-- template from realpython.com/introduction-to-flask-part-2-creating-a-login- -->
+
+<html>
+  <head>
+    <title>Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Researcher Sign Up</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+        <input type="text" placeholder="Organization" name="organization" value="{{
+          request.form.organization }}">
+        <input type="number" placeholder="Deposit($)" name="deposit" value="{{
+          request.form.deposit }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Sign Up">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+    <a href="/">Back to Home Page</a>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Researcher Requirement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+
+
+
+    <div class="container">
+      <h1>Researcher Dashboard</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Date_of_birth" name="Date_of_birth" value="{{
+          request.form.Date_of_birth }}">
+        <input type="text" placeholder="Race" name="Race" value="{{
+          request.form.Race }}">
+        <input type="text" placeholder="Gender" name="Gender" value="{{
+            request.form.Gender }}">
+        <input type="number" placeholder="Height" name="Height" value="{{
+                request.form.Height }}">
+        <input type="number" placeholder="Weight" name="Weight" value="{{
+                    request.form.Weight }}">
+        <input type="text" placeholder="Current_city" name="Current_city" value="{{
+                        request.form.Current_city }}">
+        <input type="text" placeholder="Blood_Group" name="Blood_Group" value="{{
+                            request.form.Blood_Group }}">
+        <input type="text" placeholder="Medications" name="Medications" value="{{
+                                request.form.Medications }}">
+        <input type="text" placeholder="Diagnosis" name="Diagnosis" value="{{
+                                    request.form.Diagnosis }}">
+        <input type="number" step = 0.01 placeholder="Risk_factor" name="Risk_factor" value="{{
+                                        request.form.Risk_factor }}">
+        <input class="btn btn-default" type="submit" value="Submit">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+    <a href="/balance_dashboard?user_id={{user_id}}&username={{username}}">Check Balance</a>
+    <a href="/">Logout</a>
+  </body>
+</html>

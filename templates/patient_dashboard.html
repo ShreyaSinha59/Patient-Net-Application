@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Patient Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add Your Patient (EHR) Information</h1>
+      <br>
+      <form action="" method="post">
+
+        <input type="text" placeholder="Medications" name="Medications" value="{{
+                                request.form.Medications }}">
+        <input type="text" placeholder="Diagnosis" name="Diagnosis" value="{{
+                                    request.form.Diagnosis }}">
+        <input type="float" placeholder="Risk_factor" name="Risk_factor" value="{{
+                                        request.form.Risk_factor }}">
+        <input class="btn btn-default" type="submit" value="Consent to Upload Data">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Message:</strong> {{ error }}
+      {% endif %}
+    </div>
+  <a href="/balance_dashboard?user_id={{user_id}}&username={{username}}">Check My Balance</a>
+  <a href="/">Logout</a>
+  </body>
+</html>

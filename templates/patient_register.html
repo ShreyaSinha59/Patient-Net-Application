@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Patient Sign Up</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+        <input type="text" placeholder="Hospital" name="hospital" value="{{
+          request.form.hospital }}">
+        <input type="address" placeholder="Insurance Provider Address" name="insurance_provider_address" value="{{
+          request.form.insurance_provider_address }}">
+        <input type="text" placeholder="Race" name="race" value="{{
+          request.form.race }}">
+        <input type="date" placeholder="DOB" name="age" value="{{
+          request.form.age }}">
+        <input type="integer" placeholder="Height (cm)" name="height" value="{{
+          request.form.height }}">
+        <input type="integer" placeholder="Weight (kg)" name="weight" value="{{
+          request.form.weight }}">
+        <input type="text" placeholder="Current City" name="current_city" value="{{
+          request.form.current_city }}">
+        <input type="text" placeholder="Gender" name="gender" value="{{
+          request.form.gender }}">
+        <input type="text" placeholder="Blood Group" name="blood_group" value="{{
+          request.form.blood_group }}">
+        <input type="text" placeholder="Insurance Provider" name="insurance_provider" value="{{
+          request.form.insurance_provider }}">
+        <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Sign Up">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+    <a href="/">Back to Home Page</a>
+  </body>
+</html>
